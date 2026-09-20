@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="YAAZHI Smart Active Milk Chilling Can - Detachable 40 L milk chilling system">
+<title>YAAZHI | Smart Active Milk Chilling Can</title>
+
+<style>
+:root{
+  --green:#087f5b;
+  --green2:#0aa06f;
+  --blue:#123b5d;
+  --blue2:#1d5d87;
+  --ink:#12212f;
+  --muted:#617180;
+  --line:#dce7ed;
+  --soft:#f4f8fa;
+  --white:#fff;
+  --shadow:0 18px 50px rgba(18,59,93,.10);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--ink); background:#fff; line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+section{padding:90px 0;scroll-margin-top:85px}
+.nav{
+  position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.08em;color:var(--blue);font-size:20px}
+.logo span{color:var(--green)}
+.nav-links{display:flex;gap:22px;font-size:14px;font-weight:700;color:#496171}
+.nav-links a:hover{color:var(--green)}
+.menu{display:none;border:0;background:none;font-size:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 20px;border-radius:12px;font-weight:800;border:1px solid transparent;
+  transition:.25s;cursor:pointer
+}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(8,127,91,.22)}
+.btn-primary:hover{transform:translateY(-2px);background:#066c4d}
+.btn-outline{border-color:#b9ccd7;color:var(--blue);background:#fff}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.hero{
+  min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.05fr .95fr;
+  align-items:center;gap:55px;background:
+  radial-gradient(circle at 80% 20%,rgba(8,127,91,.08),transparent 32%),
+  linear-gradient(180deg,#fff,#f5fafb);
+}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--green);font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:15px}
+.eyebrow:before{content:"";width:28px;height:2px;background:var(--green)}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;color:var(--blue);letter-spacing:-.045em}
+.hero h1 span{color:var(--green)}
+.hero h2{font-size:clamp(20px,2.4vw,30px);margin:22px 0 13px;color:#27485f}
+.hero p{font-size:18px;color:var(--muted);max-width:650px}
+.tagline{font-weight:900;color:var(--blue);font-size:18px;margin:12px 0 20px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.specs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:35px}
+.spec{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 10px;
+  text-align:center;box-shadow:0 8px 25px rgba(18,59,93,.05)
+}
+.spec b{display:block;color:var(--blue);font-size:17px}
+.spec small{color:var(--muted);font-size:11px}
+
+.can-stage{
+  min-height:510px;display:grid;place-items:center;position:relative;
+}
+.can-scene{position:relative;width:410px;height:480px}
+.base{
+  position:absolute;left:40px;bottom:38px;width:330px;height:92px;border-radius:18px;
+  background:linear-gradient(#314f63,#173448);box-shadow:0 25px 45px rgba(0,0,0,.2);
+}
+.base:before{content:"COOLING BASE";position:absolute;left:25px;top:24px;color:#bfe5d8;font-size:12px;font-weight:900;letter-spacing:.14em}
+.base:after{content:"COMPRESSOR • CONDENSER • BATTERY • CONTROL";position:absolute;left:25px;top:48px;color:#a9bac7;font-size:9px}
+.can{
+  position:absolute;z-index:3;left:95px;bottom:95px;width:220px;height:330px;
+  border-radius:48px 48px 34px 34px;
+  background:linear-gradient(90deg,#aab9c3,#fff 22%,#e8eef1 70%,#9baeb9);
+  box-shadow:0 30px 45px rgba(18,59,93,.22);border:3px solid #93a7b2;
+}
+.can:before{
+  content:"";position:absolute;left:30px;top:-23px;width:154px;height:42px;border-radius:50%;
+  background:linear-gradient(#718793,#d9e3e7 48%,#8397a2);border:3px solid #718793;
+}
+.can-label{
+  position:absolute;left:34px;right:34px;top:115px;padding:18px 8px;text-align:center;
+  border:1px solid rgba(18,59,93,.18);border-radius:14px;background:rgba(255,255,255,.62)
+}
+.can-label strong{display:block;color:var(--blue);font-size:30px;line-height:1}
+.can-label small{display:block;margin-top:8px;color:var(--green);font-weight:900}
+.dock{position:absolute;z-index:4;left:158px;bottom:118px;width:95px;height:24px;border-radius:10px;background:#6b8795}
+.wheel{position:absolute;z-index:2;bottom:22px;width:38px;height:38px;border-radius:50%;background:#1b2e3c;border:7px solid #708591}
+.w1{left:85px}.w2{right:85px}
+.sensor-dot{position:absolute;right:14px;top:105px;width:14px;height:14px;border-radius:50%;background:#0aa06f;box-shadow:0 0 0 7px rgba(10,160,111,.12)}
+.float-tag{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:9px 12px;box-shadow:var(--shadow);font-size:11px;font-weight:900;color:var(--blue)
+}
+.t1{right:0;top:80px}.t2{left:0;top:210px}.t3{right:5px;bottom:140px}
+.section-head{text-align:center;max-width:800px;margin:0 auto 45px}
+.section-head .eyebrow{justify-content:center}
+.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.05;color:var(--blue);margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.problem{background:var(--soft)}
+.flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.flow-item{
+  min-width:145px;padding:18px;border:1px solid #cfe0e7;background:#fff;border-radius:16px;
+  text-align:center;font-weight:900;color:var(--blue);box-shadow:0 8px 22px rgba(18,59,93,.05)
+}
+.arrow{font-size:25px;color:var(--green);font-weight:900}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;
+  box-shadow:0 10px 35px rgba(18,59,93,.06);transition:.3s
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card-icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#e8f6f1;color:var(--green);font-weight:900;margin-bottom:15px}
+.card h3{color:var(--blue);margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.note{margin-top:25px;padding:18px;border-left:4px solid var(--green);background:#eef8f4;border-radius:10px;color:#47616e;font-size:13px}
+.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.component-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.component-list div{padding:12px;border-radius:10px;background:#f5f8fa;border:1px solid var(--line);font-size:13px}
+.component-list b{color:var(--blue)}
+.diagram{
+  min-height:430px;background:#102b3d;border-radius:28px;padding:30px;color:#fff;position:relative;overflow:hidden
+}
+.diagram h3{margin-bottom:25px}
+.diagram-can{height:270px;display:flex;align-items:center;justify-content:center;gap:0}
+.mini-can{width:130px;height:210px;border-radius:28px 28px 18px 18px;background:linear-gradient(90deg,#a8b9c2,#fff,#aebdc5);position:relative}
+.mini-can:before{content:"";position:absolute;top:-15px;left:22px;width:86px;height:28px;border-radius:50%;background:#8399a5}
+.mini-can:after{content:"40 L";position:absolute;top:80px;left:34px;color:var(--blue);font-weight:900;font-size:25px}
+.interface{width:55px;height:22px;background:#39a884}
+.mini-base{width:150px;height:80px;border-radius:15px;background:#304d60;align-self:flex-end;margin-bottom:0;position:relative}
+.mini-base:after{content:"COOLING BASE";position:absolute;left:20px;top:30px;font-size:10px;font-weight:900;color:#bfe5d8}
+.diagram-label{display:flex;justify-content:space-between;color:#b9c9d2;font-size:11px}
+.workflow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{
+  border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff;cursor:pointer;
+  transition:.25s;position:relative
+}
+.step.active,.step:hover{border-color:#8acbb5;box-shadow:0 15px 35px rgba(8,127,91,.12)}
+.step-num{font-size:12px;color:var(--green);font-weight:900}
+.step h3{color:var(--blue);margin:7px 0}
+.step p{font-size:13px;color:var(--muted)}
+.hardware{background:var(--soft)}
+.hardware-group{margin-bottom:45px}
+.hardware-group h3{color:var(--green);margin-bottom:18px;font-size:22px}
+.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.hw{padding:20px;background:#fff;border:1px solid var(--line);border-radius:17px;cursor:pointer;transition:.25s}
+.hw:hover{transform:translateY(-4px);border-color:#9ccfbe}
+.hw b{display:block;color:var(--blue);margin-bottom:7px}
+.hw span{font-size:13px;color:var(--muted)}
+.cooling{background:#fff}
+.cooling-chain{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
+.chain{
+  background:#f5f8fa;border:1px solid var(--line);border-radius:14px;padding:15px 13px;
+  min-width:130px;text-align:center;font-weight:900;color:var(--blue);font-size:13px
+}
+.chain small{display:block;color:var(--green);margin-top:4px}
+.dashboard-wrap{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.dashboard{
+  background:#0e2434;color:#fff;border-radius:25px;padding:28px;box-shadow:var(--shadow)
+}
+.dashboard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.live{font-size:11px;color:#9de2c9;font-weight:900}
+.live:before{content:"●";margin-right:6px}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.metric{background:#18364a;border-radius:15px;padding:18px}
+.metric small{color:#a7bbc7}
+.metric strong{display:block;font-size:27px;color:#fff;margin-top:3px}
+.status{padding:17px;border-radius:15px;background:#e9f7f2;color:#087f5b;margin-top:13px;font-weight:900}
+.control-box{border:1px solid var(--line);border-radius:25px;padding:28px}
+.control-line{display:grid;grid-template-columns:1fr 45px 1fr;align-items:center;gap:10px;margin:17px 0}
+.control-node{padding:18px;border-radius:14px;background:#f5f8fa;text-align:center;border:1px solid var(--line);font-weight:900;color:var(--blue)}
+.control-arrow{text-align:center;color:var(--green);font-size:24px}
+.detach{background:var(--soft)}
+.detach-track{display:flex;align-items:center;justify-content:center;gap:0;margin:35px 0;flex-wrap:wrap}
+.detach-node{padding:18px 25px;background:#fff;border:1px solid var(--line);border-radius:14px;font-weight:900;color:var(--blue)}
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.spec-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.spec-table th,.spec-table td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line)}
+.spec-table th{width:35%;color:var(--blue);background:#f5f8fa}
+.spec-table td{color:#4f6471}
+.target{font-size:11px;background:#fff1cf;color:#8a6500;border-radius:7px;padding:3px 7px;font-weight:900}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{text-align:center;padding:30px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 8px 25px rgba(18,59,93,.05)}
+.avatar{width:65px;height:65px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:#e8f6f1;color:var(--green);font-size:22px;font-weight:900}
+.person h3{font-size:16px;color:var(--blue)}
+.person p{font-size:12px;color:var(--muted);margin-top:4px}
+.mentor{background:var(--soft)}
+.final{
+  background:linear-gradient(135deg,#0e2b3e,#0b5f4a);color:#fff;text-align:center
+}
+.final .section-head h2,.final .section-head p{color:#fff}
+.final-flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:35px 0}
+.final-flow div{padding:13px 17px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);border-radius:12px;font-weight:900;font-size:13px}
+.footer{background:#0a1e2b;color:#b6c7d1;padding:25px 0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+.modal{
+  position:fixed;inset:0;background:rgba(5,18,27,.65);display:none;place-items:center;z-index:2000;padding:20px
+}
+.modal.show{display:grid}
+.modal-box{max-width:520px;width:100%;background:#fff;border-radius:22px;padding:28px;position:relative}
+.close{position:absolute;right:18px;top:14px;border:0;background:none;font-size:25px;cursor:pointer;color:var(--muted)}
+.modal-box h3{color:var(--blue);margin-bottom:8px}.modal-box p{color:var(--muted)}
+@media(max-width:950px){
+  .nav-links{display:none}.menu{display:block}
+  .hero{grid-template-columns:1fr;padding-top:55px}
+  .grid-4,.impact{grid-template-columns:1fr 1fr}
+  .workflow-grid,.hw-grid{grid-template-columns:1fr 1fr}
+  .solution-grid,.dashboard-wrap{grid-template-columns:1fr}
+  .specs{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  section{padding:65px 0}
+  .hero{text-align:center}.actions{justify-content:center}
+  .specs,.grid-4,.impact,.workflow-grid,.hw-grid,.team-grid{grid-template-columns:1fr}
+  .component-list{grid-template-columns:1fr}
+  .can-stage{transform:scale(.82);margin:-25px 0}
+  .flow-item{min-width:120px}
+  .nav-inner{height:64px}
+  .hero h1{font-size:45px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home">YAAZHI <span>•</span> SMART CAN</a>
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#problem">PROBLEM</a>
+      <a href="#solution">SOLUTION</a>
+      <a href="#workflow">WORKFLOW</a>
+      <a href="#hardware">HARDWARE</a>
+      <a href="#monitoring">SMART MONITORING</a>
+      <a href="#impact">IMPACT</a>
+      <a href="#team">TEAM</a>
+      <a href="#mentors">MENTORS</a>
+    </div>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+
+<section class="hero">
+  <div class="container" style="display:contents">
+    <div>
+      <div class="eyebrow">Student Innovation Project</div>
+      <h1>YAAZHI <span>SMART ACTIVE</span> MILK CHILLING CAN</h1>
+      <div class="tagline">“Cool Fast. Hold Long. Move Easy. Monitor Smart.”</div>
+      <h2>Detachable 40 L Smart Active Milk Chilling Can</h2>
+      <p>An intelligent detachable 40 L milk chilling system designed to rapidly cool freshly collected milk, maintain its temperature during transportation and provide real-time monitoring.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#solution">Explore Our Solution →</a>
+        <a class="btn btn-outline" href="#workflow">View How It Works</a>
+      </div>
+      <div class="specs">
+        <div class="spec"><b>40 L</b><small>Capacity</small></div>
+        <div class="spec"><b>4–8°C</b><small>Target Range</small></div>
+        <div class="spec"><b>Detachable</b><small>Can Design</small></div>
+        <div class="spec"><b>PCM</b><small>Thermal Storage</small></div>
+        <div class="spec"><b>ESP32</b><small>Smart Monitoring</small></div>
+      </div>
+    </div>
+
+    <div class="can-stage">
+      <div class="can-scene">
+        <div class="float-tag t1">4–8°C TARGET</div>
+        <div class="float-tag t2">40 L • SS304</div>
+        <div class="float-tag t3">PCM + PUF</div>
+        <div class="can">
+          <div class="sensor-dot"></div>
+          <div class="can-label">
+            <strong>40 L</strong>
+            <small>YAAZHI SMART CAN</small>
+          </div>
+        </div>
+        <div class="dock"></div>
+        <div class="base"></div>
+        <div class="wheel w1"></div>
+        <div class="wheel w2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">01 • The Challenge</div>
+      <h2>THE PROBLEM</h2>
+      <p>Freshly collected milk is highly perishable and needs rapid chilling after collection. When milk remains at normal temperature for too long, microbial growth can increase and milk quality can deteriorate.</p>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-item">FRESH MILK</div><div class="arrow">↓</div>
+      <div class="flow-item">MILK COLLECTION</div><div class="arrow">↓</div>
+      <div class="flow-item">DELAYED CHILLING</div><div class="arrow">↓</div>
+      <div class="flow-item">WARM TRANSPORT</div><div class="arrow">↓</div>
+      <div class="flow-item">QUALITY RISK</div>
+    </div>
+
+    <div class="grid-4">
+      <div class="card reveal"><div class="card-icon">01</div><h3>Delayed Chilling</h3><p>Milk may remain warm immediately after collection.</p></div>
+      <div class="card reveal"><div class="card-icon">02</div><h3>First-Mile Transportation</h3><p>Milk often has to travel from collection points to chilling facilities.</p></div>
+      <div class="card reveal"><div class="card-icon">03</div><h3>Temperature Rise</h3><p>Ambient heat during transportation can increase milk temperature.</p></div>
+      <div class="card reveal"><div class="card-icon">04</div><h3>Limited Local Cooling</h3><p>Conventional chilling infrastructure may not be available at every collection point.</p></div>
+    </div>
+
+    <div class="note reveal"><b>Our goal:</b> Bring active chilling closer to the point of milk collection.<br><br><b>Source note:</b> “Raw milk requires immediate chilling to preserve quality.” Reference: NDDB.</div>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">02 • The Solution</div>
+      <h2>OUR SOLUTION</h2>
+      <p>YAAZHI combines active refrigeration, PCM-based thermal storage, insulation, portability and real-time monitoring in one detachable 40 L milk chilling system.</p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="card reveal">
+        <h3>A. DETACHABLE MILK CAN</h3>
+        <div class="component-list">
+          <div><b>40 L</b> capacity</div><div><b>SS304</b> food-grade inner liner</div>
+          <div><b>Temperature</b> sensor</div><div><b>Ultrasonic</b> level sensor</div>
+          <div><b>PCM</b> modules</div><div><b>Thermal</b> spreading layer</div>
+          <div><b>PUF</b> insulation</div><div><b>Outer</b> protective shell</div>
+          <div><b>Lid +</b> gasket</div><div><b>Quick-lock</b> docking connection</div>
+          <div><b>Wheels</b> for transport</div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>B. COOLING BASE</h3>
+        <div class="component-list">
+          <div><b>Compressor</b></div><div><b>Condenser</b></div>
+          <div><b>Condenser fan</b></div><div><b>Expansion device</b></div>
+          <div><b>Refrigeration tubing</b></div><div><b>Cooling / evaporator</b></div>
+          <div><b>Battery</b></div><div><b>BMS</b></div>
+          <div><b>Fuse / protection</b></div><div><b>ESP32</b> controller</div>
+          <div><b>Electronics</b></div><div><b>Display / alerts</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note reveal"><b>Core idea:</b> The can is docked onto the cooling base for active chilling. The refrigeration system transfers cooling through the thermal interface. PCM stores cooling energy during the chilling stage. Once the target temperature is reached, the can can be detached and transported while insulation and PCM help retain the low temperature.</div>
+
+    <div class="diagram reveal" style="margin-top:28px">
+      <h3>ONE CAN + ONE COOLING BASE — SECTIONAL CONCEPT</h3>
+      <div class="diagram-can">
+        <div class="mini-can"></div>
+        <div class="interface"></div>
+        <div class="mini-base"></div>
+      </div>
+      <div class="diagram-label"><span>Detachable 40 L Milk Can</span><span>Thermal Docking Interface</span><span>Separate Cooling Base</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" class="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">03 • Process</div>
+      <h2>HOW IT WORKS</h2>
+      <p>Click any step to highlight the operation.</p>
+    </div>
+
+    <div class="workflow-grid">
+      <div class="step active reveal" onclick="selectStep(this)"><span class="step-num">STEP 01</span><h3>COLLECT</h3><p>Fresh milk is collected and filled into the 40 L SS304 can.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 02</span><h3>DOCK</h3><p>The filled can is positioned onto the cooling base.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 03</span><h3>LOCK</h3><p>The quick-lock mechanism secures the can and establishes the thermal connection.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 04</span><h3>ACTIVE COOLING</h3><p>The compressor-based refrigeration system starts removing heat.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 05</span><h3>HEAT TRANSFER</h3><p>Cooling passes through the thermal interface and spreading layer toward the milk.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 06</span><h3>PCM CHARGING</h3><p>PCM stores cooling energy during active chilling.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 07</span><h3>TARGET TEMPERATURE</h3><p>The system works toward the target range of approximately 4–8°C.</p></div>
+      <div class="step reveal" onclick="selectStep(this)"><span class="step-num">STEP 08</span><h3>DETACH & TRANSPORT</h3><p>The can is detached and transported while temperature continues to be monitored.</p></div>
+    </div>
+
+    <div class="flow" style="margin-top:35px">
+      <div class="flow-item">MILK COLLECTION</div><div class="arrow">↓</div>
+      <div class="flow-item">FILL CAN</div><div class="arrow">↓</div>
+      <div class="flow-item">DOCK</div><div class="arrow">↓</div>
+      <div class="flow-item">LOCK</div><div class="arrow">↓</div>
+      <div class="flow-item">ACTIVE COOLING</div><div class="arrow">↓</div>
+      <div class="flow-item">PCM CHARGING</div><div class="arrow">↓</div>
+      <div class="flow-item">4–8°C TARGET</div><div class="arrow">↓</div>
+      <div class="flow-item">DETACH</div><div class="arrow">↓</div>
+      <div class="flow-item">TRANSPORT + MONITOR</div>
+    </div>
+  </div>
+</section>
+
+<section id="hardware" class="hardware">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">04 • Engineering</div>
+      <h2>HARDWARE</h2>
+      <p>Every hardware card below represents a component specified for the YAAZHI system.</p>
+    </div>
+
+    <div class="hardware-group">
+      <h3>A. MILK CAN COMPONENTS</h3>
+      <div class="hw-grid">
+        <div class="hw" onclick="showInfo('SS304 INNER LINER','Food-contact chamber that safely contains the milk.')"><b>01. SS304 INNER LINER</b><span>Food-contact chamber.</span></div>
+        <div class="hw" onclick="showInfo('TEMPERATURE SENSOR','Measures the milk temperature continuously.')"><b>02. TEMPERATURE SENSOR</b><span>Continuous milk temperature measurement.</span></div>
+        <div class="hw" onclick="showInfo('ULTRASONIC LEVEL SENSOR','Measures milk level and estimates the quantity inside the can.')"><b>03. ULTRASONIC LEVEL SENSOR</b><span>Milk level estimation.</span></div>
+        <div class="hw" onclick="showInfo('PCM MODULES','Store thermal energy during chilling and support temperature maintenance after detachment.')"><b>04. PCM MODULES</b><span>Thermal energy storage.</span></div>
+        <div class="hw" onclick="showInfo('THERMAL SPREADING LAYER','Distributes cooling across the cooling region.')"><b>05. THERMAL SPREADING LAYER</b><span>Cooling distribution.</span></div>
+        <div class="hw" onclick="showInfo('PUF INSULATION','Reduces heat gain from the surroundings.')"><b>06. PUF INSULATION</b><span>Reduces heat gain.</span></div>
+        <div class="hw" onclick="showInfo('OUTER SHELL','Protects the internal structure.')"><b>07. OUTER SHELL</b><span>Structural protection.</span></div>
+        <div class="hw" onclick="showInfo('LID + GASKET','Provides a sealed and protected milk chamber.')"><b>08. LID + GASKET</b><span>Sealed milk chamber.</span></div>
+        <div class="hw" onclick="showInfo('QUICK-LOCK CONNECTION','Secures the detachable can to the cooling base.')"><b>09. QUICK-LOCK CONNECTION</b><span>Secure docking.</span></div>
+        <div class="hw" onclick="showInfo('WHEELS','Allow easier transportation of the detachable can.')"><b>10. WHEELS</b><span>Easy transport.</span></div>
+      </div>
+    </div>
+
+    <div class="hardware-group">
+      <h3>B. COOLING BASE COMPONENTS</h3>
+      <div class="hw-grid">
+        <div class="hw" onclick="showInfo('COMPRESSOR','Drives the refrigeration cycle and enables active cooling.')"><b>11. COMPRESSOR</b><span>Drives active refrigeration.</span></div>
+        <div class="hw" onclick="showInfo('CONDENSER','Rejects heat from the refrigerant to the surroundings.')"><b>12. CONDENSER</b><span>Rejects heat.</span></div>
+        <div class="hw" onclick="showInfo('CONDENSER FAN','Improves heat rejection by moving air through the condenser.')"><b>13. CONDENSER FAN</b><span>Improves heat rejection.</span></div>
+        <div class="hw" onclick="showInfo('EXPANSION DEVICE','Reduces refrigerant pressure before the cooling section.')"><b>14. EXPANSION DEVICE</b><span>Pressure reduction.</span></div>
+        <div class="hw" onclick="showInfo('COOLING / EVAPORATOR SECTION','Absorbs heat from the cooling path.')"><b>15. COOLING / EVAPORATOR</b><span>Heat absorption.</span></div>
+        <div class="hw" onclick="showInfo('REFRIGERATION TUBING','Carries refrigerant through the closed refrigeration cycle.')"><b>16. REFRIGERATION TUBING</b><span>Closed refrigerant path.</span></div>
+        <div class="hw" onclick="showInfo('BATTERY','Provides electrical power for the portable system.')"><b>17. BATTERY</b><span>Electrical power.</span></div>
+        <div class="hw" onclick="showInfo('BMS','Monitors and protects the battery.')"><b>18. BMS</b><span>Battery monitoring and protection.</span></div>
+        <div class="hw" onclick="showInfo('FUSE / PROTECTION','Provides electrical protection.')"><b>19. FUSE / PROTECTION</b><span>Electrical safety.</span></div>
+        <div class="hw" onclick="showInfo('ESP32','Acts as the main controller for smart monitoring and cooling control.')"><b>20. ESP32</b><span>Main smart controller.</span></div>
+        <div class="hw" onclick="showInfo('DISPLAY / ALERT SYSTEM','Shows system information and provides warnings.')"><b>21. DISPLAY / ALERT</b><span>Information and warnings.</span></div>
+        <div class="hw" onclick="showInfo('MPU6050','Monitors the can’s tilt/orientation.')"><b>22. MPU6050</b><span>Tilt/orientation monitoring.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cooling">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">05 • Thermal System</div>
+      <h2>OUR COOLING TECHNOLOGY</h2>
+      <p>The active cooling path uses a compressor-based refrigeration system. PCM supports temperature maintenance and does not replace refrigeration.</p>
+    </div>
+
+    <div class="cooling-chain reveal">
+      <div class="chain">COMPRESSOR<small>1</small></div><div class="arrow">→</div>
+      <div class="chain">CONDENSER<small>2</small></div><div class="arrow">→</div>
+      <div class="chain">EXPANSION DEVICE<small>3</small></div><div class="arrow">→</div>
+      <div class="chain">COOLING / EVAPORATOR<small>4</small></div><div class="arrow">→</div>
+      <div class="chain">THERMAL DOCKING<small>5</small></div><div class="arrow">→</div>
+      <div class="chain">SPREADING LAYER<small>6</small></div><div class="arrow">→</div>
+      <div class="chain">PCM<small>7</small></div><div class="arrow">→</div>
+      <div class="chain">SS304 WALL<small>8</small></div><div class="arrow">→</div>
+      <div class="chain">MILK<small>9</small></div>
+    </div>
+
+    <div class="note reveal"><b>Technical principle:</b> The compressor-based refrigeration system performs the active cooling. The PCM does not replace the refrigeration system; it stores cooling energy and supports temperature maintenance after active chilling. The refrigeration circuit remains sealed and isolated from the milk.</div>
+  </div>
+</section>
+
+<section id="monitoring" class="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">06 • Intelligence</div>
+      <h2>SMART MONITORING</h2>
+      <p>The ESP32 acts as the central controller for sensor data, monitoring and cooling control.</p>
+    </div>
+
+    <div class="dashboard-wrap">
+      <div class="dashboard reveal">
+        <div class="dashboard-top"><h3>YAAZHI MONITOR</h3><span class="live">EXAMPLE DATA</span></div>
+        <div class="dash-grid">
+          <div class="metric"><small>TEMPERATURE</small><strong>6.3°C</strong></div>
+          <div class="metric"><small>MILK LEVEL</small><strong>32.5 L</strong></div>
+          <div class="metric"><small>BATTERY</small><strong>81%</strong></div>
+          <div class="metric"><small>TILT</small><strong>2.4°</strong></div>
+        </div>
+        <div class="status">❄ COOLING: MAINTAINING</div>
+        <div class="status">✓ SYSTEM: NORMAL</div>
+      </div>
+
+      <div class="card reveal">
+        <h3>What the system monitors</h3>
+        <div class="component-list">
+          <div><b>Milk Temperature</b></div>
+          <div><b>Milk Level</b></div>
+          <div><b>Can Tilt</b></div>
+          <div><b>Battery Status</b></div>
+          <div><b>Cooling Status</b></div>
+        </div>
+        <div class="note">These are <b>Example dashboard values</b>, not measured prototype results.</div>
+        <p style="margin-top:18px;color:var(--muted);font-size:14px">The temperature sensor continuously monitors milk temperature. The ultrasonic sensor estimates milk level. The MPU6050 detects tilt. The ESP32 processes the sensor data and controls cooling according to the defined temperature logic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">07 • Control Logic</div>
+      <h2>AUTOMATIC TEMPERATURE CONTROL</h2>
+    </div>
+    <div class="control-box reveal">
+      <div class="control-line"><div class="control-node">TEMPERATURE ABOVE TARGET</div><div class="control-arrow">→</div><div class="control-node">COOLING ON</div></div>
+      <div class="control-line"><div class="control-node">TARGET TEMPERATURE REACHED</div><div class="control-arrow">→</div><div class="control-node">COOLING REDUCED / OFF</div></div>
+      <div class="control-line"><div class="control-node">TEMPERATURE RISES</div><div class="control-arrow">→</div><div class="control-node">COOLING ON AGAIN</div></div>
+      <div class="note">The system avoids unnecessary continuous compressor operation by using temperature-based control. This supports lower energy consumption while maintaining the required temperature range. No measured energy-saving percentage is claimed.</div>
+    </div>
+  </div>
+</section>
+
+<section class="detach">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">08 • Portability</div>
+      <h2>WHY DETACHABLE?</h2>
+      <p>The refrigeration system remains in the cooling base, while the chilled milk can can be detached for transportation.</p>
+    </div>
+
+    <div class="detach-track reveal">
+      <div class="detach-node">DOCK</div><div class="arrow">→</div>
+      <div class="detach-node">CHILL</div><div class="arrow">→</div>
+      <div class="detach-node">UNLOCK</div><div class="arrow">→</div>
+      <div class="detach-node">DETACH</div><div class="arrow">→</div>
+      <div class="detach-node">TRANSPORT</div>
+    </div>
+
+    <div class="grid-4">
+      <div class="card reveal"><div class="card-icon">✓</div><h3>Easier Transportation</h3><p>The detachable can can be moved independently after chilling.</p></div>
+      <div class="card reveal"><div class="card-icon">↔</div><h3>Separate Cooling Base</h3><p>Cooling equipment remains in the base rather than travelling with the milk.</p></div>
+      <div class="card reveal"><div class="card-icon">◉</div><h3>Independent Cleaning</h3><p>The can can be cleaned separately from the cooling base.</p></div>
+      <div class="card reveal"><div class="card-icon">◌</div><h3>Temperature Maintenance</h3><p>PCM and insulation support temperature maintenance during transport.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">09 • Value</div>
+      <h2>IMPACT</h2>
+    </div>
+    <div class="impact">
+      <div class="card reveal"><div class="card-icon">01</div><h3>MILK QUALITY</h3><p>Rapid chilling helps reduce the time milk remains at warm temperatures.</p></div>
+      <div class="card reveal"><div class="card-icon">02</div><h3>FIRST-MILE COLD CHAIN</h3><p>Brings active cooling closer to the point of milk collection.</p></div>
+      <div class="card reveal"><div class="card-icon">03</div><h3>PORTABILITY</h3><p>The detachable can can be moved independently after chilling.</p></div>
+      <div class="card reveal"><div class="card-icon">04</div><h3>SMART MONITORING</h3><p>Provides real-time information about temperature, level, tilt and battery status.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">10 • Technical Data</div>
+      <h2>PROJECT SPECIFICATIONS</h2>
+    </div>
+    <div class="card reveal" style="padding:0;overflow:hidden">
+      <table class="spec-table">
+        <tr><th>Capacity</th><td>40 L</td></tr>
+        <tr><th>Can Type</th><td>Detachable</td></tr>
+        <tr><th>Milk Contact Material</th><td>Food-grade SS304</td></tr>
+        <tr><th>Target Temperature</th><td>4–8°C</td></tr>
+        <tr><th>Central Temperature Target</th><td>~6°C</td></tr>
+        <tr><th>Cooling</th><td>Compressor-based refrigeration</td></tr>
+        <tr><th>Thermal Storage</th><td>PCM</td></tr>
+        <tr><th>Insulation</th><td>PUF</td></tr>
+        <tr><th>Controller</th><td>ESP32</td></tr>
+        <tr><th>Milk Level</th><td>Ultrasonic Sensor</td></tr>
+        <tr><th>Tilt</th><td>MPU6050</td></tr>
+        <tr><th>Power</th><td>Battery</td></tr>
+        <tr><th>Transportation</th><td>Wheels</td></tr>
+        <tr><th>Monitoring</th><td>Temperature + Level + Tilt + Battery + Cooling Status</td></tr>
+        <tr><th>Maintenance Duration</th><td>6–12 hours <span class="target">DESIGN TARGET • VALIDATION REQUIRED</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">11 • People</div>
+      <h2>MEET THE TEAM</h2>
+      <p>YAAZHI — Project Team</p>
+    </div>
+    <div class="team-grid">
+      <div class="person reveal"><div class="avatar">SN</div><h3>SAMYUKTHA N</h3><p>Team Lead (TL)</p></div>
+      <div class="person reveal"><div class="avatar">AP</div><h3>ASMITHA P</h3></div>
+      <div class="person reveal"><div class="avatar">AS</div><h3>ABISHEK S</h3></div>
+      <div class="person reveal"><div class="avatar">BN</div><h3>BARANIDHARAN N</h3></div>
+      <div class="person reveal"><div class="avatar">SK</div><h3>SARATHY K</h3></div>
+      <div class="person reveal"><div class="avatar">MA</div><h3>MAHIMA SRI A</h3></div>
+    </div>
+  </div>
+</section>
+
+<section id="mentors" class="mentor">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">12 • Guidance</div>
+      <h2>OUR MENTORS</h2>
+    </div>
+    <div class="team-grid" style="max-width:760px;margin:auto">
+      <div class="person reveal"><div class="avatar">GP</div><h3>MR. GAJENDRAN PARTHASARATHY</h3><p>Mentor</p></div>
+      <div class="person reveal"><div class="avatar">M</div><h3>MR. MUTHUSAMY</h3><p>Mentor</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:#9de2c9">Final Vision</div>
+      <h2>FROM COLLECTION TO COLD CHAIN</h2>
+      <p>YAAZHI brings active milk chilling closer to the point of collection through a detachable, portable and intelligently monitored cooling system.</p>
+    </div>
+
+    <div class="final-flow reveal">
+      <div>FRESH MILK</div><span>→</span><div>40 L SMART CAN</div><span>→</span>
+      <div>ACTIVE CHILLING</div><span>→</span><div>4–8°C</div><span>→</span>
+      <div>DETACH</div><span>→</span><div>TRANSPORT</div><span>→</span><div>REAL-TIME MONITORING</div>
+    </div>
+
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-primary" style="background:#fff;color:#0b6d51" href="#hardware">Explore the Technology</a>
+      <a class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4)" href="#team">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><b>YAAZHI</b> • Smart Active Milk Chilling Can</div>
+    <div>Cool Fast. Hold Long. Move Easy. Monitor Smart.</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="close" onclick="hideModal()">×</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  const links=document.querySelector('.nav-links');
+  links.style.display=links.style.display==='flex'?'none':'flex';
+  links.style.position='absolute';
+  links.style.top='64px';
+  links.style.left='0';
+  links.style.right='0';
+  links.style.padding='20px';
+  links.style.background='#fff';
+  links.style.flexDirection='column';
+}
+function selectStep(el){
+  document.querySelectorAll('.step').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+}
+function showInfo(title,text){
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalText').textContent=text;
+  document.getElementById('modal').classList.add('show');
+}
+function hideModal(){document.getElementById('modal').classList.remove('show')}
+function closeModal(e){if(e.target.id==='modal') hideModal()}
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
